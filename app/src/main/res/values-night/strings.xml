@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="register_book">Registro de libro</string>
+    <string name="book_name_text_view">Título del libro</string>
+    <string name="author_name_text_view">Nombre del autor</string>
+    <string name="author_name_edit_text">Autor</string>
+    <string name="book_name_edit_text">Libro</string>
+    <string name="pages_number">Número de páginas</string>
+    <string name="abstract_input_text">Sinopsis</string>
+    <string name="string_save">Guardar</string>
+    <string name="save_button" />
+</resources>

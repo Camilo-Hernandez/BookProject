@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/register_book_text_view"
+        style="@style/TitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/register_book"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/book_name_text_view"
+        style="@style/SubTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/book_name_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_book_text_view" />
+
+    <TextView
+        android:id="@+id/author_name_text_view"
+        style="@style/SubTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/author_name_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/book_name_text_view"
+        app:layout_constraintStart_toStartOf="@+id/book_name_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/book_name_text_view" />
+
+    <EditText
+        android:id="@+id/author_name_edit_text"
+        style="@style/NormalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/author_name_edit_text"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/author_name_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/book_name_edit_text"
+        app:layout_constraintStart_toEndOf="@+id/author_name_text_view"
+        app:layout_constraintStart_toStartOf="@+id/book_name_edit_text" />
+
+    <EditText
+        android:id="@+id/book_name_edit_text"
+        style="@style/NormalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/book_name_edit_text"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/book_name_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/book_name_text_view" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pages_text_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/author_name_edit_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pages_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:foregroundTint="#193477"
+            android:hint="@string/pages_number"
+            android:inputType="number|textCapCharacters"
+            android:textColorHint="#88C533"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/abstract_text_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pages_text_input_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/abstract_input_text"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:height="48dp"
+            android:hint="@string/abstract_input_text"
+            android:outlineProvider="none"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/save_button"
+        style="@style/TitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/save_button"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/abstract_text_input_layout"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/info_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="174dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="174dp"
+        android:text="@string/data_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
