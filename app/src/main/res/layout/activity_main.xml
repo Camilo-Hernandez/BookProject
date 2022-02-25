@@ -1,144 +1,313 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:fillViewport="true"
+    >
 
-    <TextView
-        android:id="@+id/register_book_text_view"
-        style="@style/TitleTextView"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/register_book"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/book_name_text_view"
-        style="@style/SubTitleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="36dp"
-        android:text="@string/book_name_text_view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_book_text_view" />
+        <TextView
+            android:id="@+id/register_book_text_view"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/book_register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/author_name_text_view"
-        style="@style/SubTitleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="@string/author_name_text_view"
-        app:layout_constraintEnd_toEndOf="@+id/book_name_text_view"
-        app:layout_constraintStart_toStartOf="@+id/book_name_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/book_name_text_view" />
+        <TextView
+            android:id="@+id/book_name_text_view"
+            style="@style/SubTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/book_name_text_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_book_text_view" />
 
-    <EditText
-        android:id="@+id/author_name_edit_text"
-        style="@style/NormalTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/author_name_edit_text"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/author_name_text_view"
-        app:layout_constraintEnd_toEndOf="@+id/book_name_edit_text"
-        app:layout_constraintStart_toEndOf="@+id/author_name_text_view"
-        app:layout_constraintStart_toStartOf="@+id/book_name_edit_text" />
+        <TextView
+            android:id="@+id/author_name_text_view"
+            style="@style/SubTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@string/author_name_text_view"
+            app:layout_constraintEnd_toEndOf="@+id/book_name_text_view"
+            app:layout_constraintStart_toStartOf="@+id/book_name_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/book_name_text_view" />
 
-    <EditText
-        android:id="@+id/book_name_edit_text"
-        style="@style/NormalTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/book_name_edit_text"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/book_name_text_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/book_name_text_view" />
+        <EditText
+            android:id="@+id/book_name_edit_text"
+            style="@style/NormalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/book_name_edit_text"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/book_name_text_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/book_name_text_view" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/pages_text_input_layout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/author_name_edit_text">
+        <EditText
+            android:id="@+id/author_name_edit_text"
+            style="@style/NormalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/author_name_edit_text"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/author_name_text_view"
+            app:layout_constraintEnd_toEndOf="@+id/book_name_edit_text"
+            app:layout_constraintStart_toEndOf="@+id/author_name_text_view"
+            app:layout_constraintStart_toStartOf="@+id/book_name_edit_text" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/pages_edit_text"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pages_text_input_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/author_name_edit_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pages_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:foregroundTint="#193477"
+                android:hint="@string/pages_number"
+                android:inputType="number|textCapCharacters"
+                android:textColorHint="#88C533"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/abstract_text_input_layout"
+            android:layout_width="0dp"
             android:layout_height="48dp"
-            android:foregroundTint="#193477"
-            android:hint="@string/pages_number"
-            android:inputType="number|textCapCharacters"
-            android:textColorHint="#88C533"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pages_text_input_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/abstract_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:height="48dp"
+                android:hint="@string/abstract_input_text"
+                android:outlineProvider="none"
+                tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/genre_text_view"
+            style="@style/SubTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/genre_text_view"
+            app:layout_constraintEnd_toStartOf="@+id/child_checkBox"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/abstract_text_input_layout" />
+
+        <CheckBox
+            android:id="@+id/child_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/child_checkbox"
+            app:layout_constraintBaseline_toBaselineOf="@+id/genre_text_view"
+            app:layout_constraintEnd_toStartOf="@+id/thriller_checkBox"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/genre_text_view" />
+
+        <CheckBox
+            android:id="@+id/thriller_checkBox"
+            android:layout_width="107dp"
+            android:layout_height="48dp"
+            android:text="@string/thriller_checkbox"
+            app:layout_constraintBaseline_toBaselineOf="@+id/genre_text_view"
+            app:layout_constraintEnd_toStartOf="@+id/drama_checkBox"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/child_checkBox" />
+
+        <CheckBox
+            android:id="@+id/drama_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/drama_checkbox"
+            app:layout_constraintBaseline_toBaselineOf="@+id/genre_text_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/thriller_checkBox" />
+
+        <CheckBox
+            android:id="@+id/fantasy_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:minHeight="48dp"
+            android:text="@string/fantasy_checkbox"
+            app:layout_constraintEnd_toStartOf="@+id/terror_checkBox"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/genre_text_view" />
+
+        <CheckBox
+            android:id="@+id/terror_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/terror_checkbox"
+            app:layout_constraintBaseline_toBaselineOf="@+id/fantasy_checkBox"
+            app:layout_constraintEnd_toStartOf="@+id/science_fiction_checkBox"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/fantasy_checkBox" />
+
+        <CheckBox
+            android:id="@+id/science_fiction_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/science_fiction_checkbox"
+            app:layout_constraintBaseline_toBaselineOf="@+id/terror_checkBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/terror_checkBox" />
+
+        <TextView
+            android:id="@+id/Calificación"
+            style="@style/SubTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/score_text_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fantasy_checkBox" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="374dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Calificación">
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:height="48dp"
+                android:text="@string/score1_radio_button" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:height="48dp"
+                android:text="@string/score2_radio_button" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:height="48dp"
+                android:text="@string/score3_radio_button" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:height="48dp"
+                android:text="@string/score4_radio_button" />
+
+            <RadioButton
+                android:id="@+id/radioButton5"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:height="48dp"
+                android:checked="true"
+                android:text="@string/score5_radio_button"
+                android:textColor="#00796B" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/publication_date_button"
+            style="@style/TitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:drawableStart="@drawable/ic_today"
+            android:text="@string/publication_date_text_view"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <Button
+            android:id="@+id/save_button"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/save_button"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/publication_date_button"
             tools:ignore="TextContrastCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/abstract_text_input_layout"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pages_text_input_layout">
+        <TextView
+            android:id="@+id/info_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/data_text_view"
+            app:layout_constraintStart_toEndOf="@+id/save_button"
+            app:layout_constraintTop_toBottomOf="@+id/publication_date_button" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/abstract_input_text"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:height="48dp"
-            android:hint="@string/abstract_input_text"
-            android:outlineProvider="none"
-            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/save_button"
-        style="@style/TitleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:text="@string/save_button"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/abstract_text_input_layout"
-        tools:ignore="TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/info_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="174dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="174dp"
-        android:text="@string/data_text_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/save_button" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
