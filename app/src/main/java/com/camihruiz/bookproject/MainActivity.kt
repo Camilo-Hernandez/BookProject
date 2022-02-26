@@ -48,13 +48,13 @@ class MainActivity : AppCompatActivity() {
             
             
             saveButton.setOnClickListener {
-                if (bookNameEditText.text?.isEmpty() == true || authorNameEditText.text?.isEmpty() == true || pagesEditText.text?.isEmpty() == true) {
+                if (bookNameInputText.text?.isEmpty() == true || authorNameInputText.text?.isEmpty() == true || pagesInputText.text?.isEmpty() == true) {
                     Toast.makeText(applicationContext,"Debe digital nombre, autor y número de páginas",Toast.LENGTH_SHORT).show()
                 } else {
-                    val nameBook: String = bookNameEditText.text.toString() // no es necesario poner : String porque la variable infiere desde toString()
-                    val author = authorNameEditText.text.toString()
-                    val pages = pagesEditText.text.toString().toInt()
-                    val abstract = abstractEditText.text.toString()
+                    val nameBook: String = bookNameInputText.text.toString() // no es necesario poner : String porque la variable infiere desde toString()
+                    val author = authorNameInputText.text.toString()
+                    val pages = pagesInputText.text.toString().toInt()
+                    val abstract = abstractInputText.text.toString()
                     
                     var genre = ""
                     if (childCheckBox.isChecked) genre += "Infantil "

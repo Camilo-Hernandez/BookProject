@@ -23,60 +23,51 @@
             android:layout_marginEnd="16dp"
             android:text="@string/book_register"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.478"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/book_name_text_view"
-            style="@style/SubTitleTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="36dp"
-            android:text="@string/book_name_text_view"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/register_book_text_view" />
 
-        <TextView
-            android:id="@+id/author_name_text_view"
-            style="@style/SubTitleTextView"
-            android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/book_name_text_input_layout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:text="@string/author_name_text_view"
-            app:layout_constraintEnd_toEndOf="@+id/book_name_text_view"
-            app:layout_constraintStart_toStartOf="@+id/book_name_text_view"
-            app:layout_constraintTop_toBottomOf="@+id/book_name_text_view" />
-
-        <EditText
-            android:id="@+id/book_name_edit_text"
-            style="@style/NormalTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/book_name_edit_text"
-            android:importantForAutofill="no"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/book_name_text_view"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/book_name_text_view" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_book_text_view">
 
-        <EditText
-            android:id="@+id/author_name_edit_text"
-            style="@style/NormalTextView"
-            android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/book_name_input_text"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="@string/book_name_input_text"
+                android:inputType="textShortMessage|textPersonName|textCapWords"
+                android:textColorHint="#88C533"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/author_name_text_input_layout"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/author_name_edit_text"
-            android:importantForAutofill="no"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/author_name_text_view"
-            app:layout_constraintEnd_toEndOf="@+id/book_name_edit_text"
-            app:layout_constraintStart_toEndOf="@+id/author_name_text_view"
-            app:layout_constraintStart_toStartOf="@+id/book_name_edit_text" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/book_name_text_input_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/author_name_input_text"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="@string/author_name_input_text"
+                android:inputType="textShortMessage|textPersonName|textCapWords"
+                android:textColorHint="#88C533"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/pages_text_input_layout"
@@ -87,15 +78,14 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/author_name_edit_text">
+            app:layout_constraintTop_toBottomOf="@+id/author_name_text_input_layout">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/pages_edit_text"
+                android:id="@+id/pages_input_text"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:foregroundTint="#193477"
-                android:hint="@string/pages_number"
-                android:inputType="number|textCapCharacters"
+                android:hint="@string/pages_input_text"
+                android:inputType="number"
                 android:textColorHint="#88C533"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -103,7 +93,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/abstract_text_input_layout"
             android:layout_width="0dp"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
@@ -112,13 +102,13 @@
             app:layout_constraintTop_toBottomOf="@+id/pages_text_input_layout">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/abstract_edit_text"
+                android:id="@+id/abstract_input_text"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:height="48dp"
+                android:layout_height="wrap_content"
                 android:hint="@string/abstract_input_text"
-                android:outlineProvider="none"
-                tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+                android:inputType="textLongMessage|textAutoCorrect|textMultiLine|textFilter|textCapSentences|textAutoComplete"
+                android:textColorHint="#88C533"
+                tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -200,7 +190,7 @@
             app:layout_constraintStart_toEndOf="@+id/terror_checkBox" />
 
         <TextView
-            android:id="@+id/Calificación"
+            android:id="@+id/score_text_view"
             style="@style/SubTitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -220,7 +210,7 @@
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Calificación">
+            app:layout_constraintTop_toBottomOf="@+id/score_text_view">
 
             <RadioButton
                 android:id="@+id/radioButton1"
@@ -285,11 +275,11 @@
         <Button
             android:id="@+id/save_button"
             style="@style/TitleTextView"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/save_button"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
@@ -302,11 +292,13 @@
             android:id="@+id/info_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
             android:text="@string/data_text_view"
-            app:layout_constraintStart_toEndOf="@+id/save_button"
-            app:layout_constraintTop_toBottomOf="@+id/publication_date_button" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/save_button" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

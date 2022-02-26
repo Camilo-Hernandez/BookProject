@@ -1,15 +1,13 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Book Project</string>
     <string name="book_register">Registro de libro</string>
-    <string name="book_name_text_view">Título del libro</string>
-    <string name="author_name_text_view">Nombre del autor</string>
-    <string name="author_name_edit_text">Autor</string>
-    <string name="book_name_edit_text">Libro</string>
-    <string name="pages_number">Número de páginas</string>
+    <string name="author_name_input_text" tools:ignore="Typos">Autor</string>
+    <string name="book_name_input_text">Libro</string>
+    <string name="pages_input_text">Número de páginas</string>
     <string name="abstract_input_text">Sinopsis</string>
     <string name="save_button">Guardar</string>
     <string name="data_text_view" />
-    <string name="info">Nombre: %s \nAutor: %s \nPáginas: %d \nReseña: %s \nGénero: %s \nCalificación: %d \nFecha de publicación: %s</string> // placeholder: una especie de plantilla
+    <string name="info" tools:ignore="Typos">Nombre: %s \nAutor: %s \nPáginas: %d \nReseña: %s \nGénero: %s \nCalificación: %d \nFecha de publicación: %s</string> // placeholder: una especie de plantilla
     <string name="genre_text_view">Género</string>
     <string name="terror_checkbox">Terror</string>
     <string name="drama_checkbox">Drama</string>
