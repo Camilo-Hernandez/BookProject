@@ -108,7 +108,7 @@
                 android:hint="@string/abstract_input_text"
                 android:inputType="textLongMessage|textAutoCorrect|textMultiLine|textFilter|textCapSentences|textAutoComplete"
                 android:textColorHint="#88C533"
-                tools:ignore="TextContrastCheck" />
+                tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -278,14 +278,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
             android:text="@string/save_button"
             android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/publication_date_button"
             tools:ignore="TextContrastCheck" />
 
         <TextView

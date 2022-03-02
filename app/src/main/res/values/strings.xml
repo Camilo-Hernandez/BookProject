@@ -1,5 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Book Project</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
     <string name="book_register">Registro de libro</string>
     <string name="author_name_input_text" tools:ignore="Typos">Autor</string>
     <string name="book_name_input_text">Libro</string>
@@ -7,7 +11,8 @@
     <string name="abstract_input_text">Sinopsis</string>
     <string name="save_button">Guardar</string>
     <string name="data_text_view" />
-    <string name="info" tools:ignore="Typos">Nombre: %s \nAutor: %s \nPáginas: %d \nReseña: %s \nGénero: %s \nCalificación: %d \nFecha de publicación: %s</string> // placeholder: una especie de plantilla
+    <string name="info" tools:ignore="Typos">Nombre: %s \nAutor: %s \nPáginas: %d \nReseña: %s \nGénero: %s \nCalificación: %d \nFecha de publicación: %s</string>
+    // placeholder: una especie de plantilla
     <string name="genre_text_view">Género</string>
     <string name="terror_checkbox">Terror</string>
     <string name="drama_checkbox">Drama</string>
@@ -22,4 +27,21 @@
     <string name="score4_radio_button">4</string>
     <string name="score5_radio_button">5</string>
     <string name="publication_date_text_view">Fecha de publicación</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="logo">Logo</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="register"><u>Regístrate</u></string>
+    <string name="rep_password">Repita la contraseña</string>
+    <string name="sign_out">Cerrar sesión</string>
 </resources>

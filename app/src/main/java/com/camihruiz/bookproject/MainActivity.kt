@@ -4,7 +4,10 @@ package com.camihruiz.bookproject
 //import android.widget.EditText
 //import android.widget.TextView
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.camihruiz.bookproject.databinding.ActivityMainBinding
@@ -13,7 +16,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
     
-    private lateinit var mainBinding : ActivityMainBinding
+    private lateinit var mainBinding: ActivityMainBinding
     private var calendar = Calendar.getInstance()
     private var publicationDate = ""
     
@@ -46,7 +49,6 @@ class MainActivity : AppCompatActivity() {
                 ).show()
             }
             
-            
             saveButton.setOnClickListener {
                 if (bookNameInputText.text?.isEmpty() == true || authorNameInputText.text?.isEmpty() == true || pagesInputText.text?.isEmpty() == true) {
                     Toast.makeText(applicationContext,"Debe digital nombre, autor y número de páginas",Toast.LENGTH_SHORT).show()
@@ -73,8 +75,31 @@ class MainActivity : AppCompatActivity() {
                     }
                     
                     infoTextView.text = getString(R.string.info, nameBook, author, pages, abstract, genre, score, publicationDate)
+                    
+                    val intent = Intent(this@MainActivity,LoginActivity::class.java)
+                    startActivity(intent)
+                    
                 }
             }
         }
     }
+    
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_overflow,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+    
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId){
+            R.id.menu_sign_out -> goToLoginActivity()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+    
+    private fun goToLoginActivity(){
+        val intent = Intent(this, LoginActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK + Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+    }
+    
 }
